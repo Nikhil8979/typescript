@@ -1,16 +1,16 @@
-const add = (
-  num1: number,
-  num2: number,
-  showResult: boolean,
-  phrase: string
-) => {
-  const sum = num1 + num2;
-  if (showResult) {
-    console.log(phrase + sum);
-  } else {
-    return sum;
-  }
-};
+// const add = (
+//   num1: number,
+//   num2: number,
+//   showResult: boolean,
+//   phrase: string
+// ) => {
+//   const sum = num1 + num2;
+//   if (showResult) {
+//     console.log(phrase + sum);
+//   } else {
+//     return sum;
+//   }
+// };
 
 //  working with string,number,boolean
 let number1 = 5;
