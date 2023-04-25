@@ -5,6 +5,7 @@ user = {
     age: 23,
     post: "it",
 };
+console.log(user);
 class Car {
     drive() {
         console.log("Driving a car....");
