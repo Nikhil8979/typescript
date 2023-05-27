@@ -42,24 +42,49 @@
 // };
 
 // console.log(extractAndConvert({ name: "NIkhil" }, "name"));
-class DataStorage<T> {
-  private data: T[] = [];
+// class DataStorage<T> {
+//   private data: T[] = [];
 
-  addItem(item: T) {
-    this.data.push(item);
-  }
-  removeItem(item: T) {
-    this.data.splice(this.data.indexOf(item), 1);
-  }
+//   addItem(item: T) {
+//     this.data.push(item);
+//   }
+//   removeItem(item: T) {
+//     this.data.splice(this.data.indexOf(item), 1);
+//   }
 
-  getItems() {
-    return [...this.data];
-  }
+//   getItems() {
+//     return [...this.data];
+//   }
+// }
+
+// const textStorage = new DataStorage<string>();
+// textStorage.addItem("Nikhil");
+// textStorage.addItem("Pragya");
+// textStorage.addItem("Alok");
+// textStorage.removeItem("Alok");
+// console.log(textStorage.getItems());
+
+// utility types
+
+interface CourseGoal {
+  title: string;
+  description: string;
+  date: Date;
+}
+function createCourseGoal(
+  title: string,
+  description: string,
+  date: Date
+): CourseGoal {
+  let goalCourse: Partial<CourseGoal> = {};
+  goalCourse.title = title;
+  goalCourse.description = description;
+  goalCourse.date = date;
+
+  return goalCourse as CourseGoal;
 }
 
-const textStorage = new DataStorage<string>();
-textStorage.addItem("Nikhil");
-textStorage.addItem("Pragya");
-textStorage.addItem("Alok");
-textStorage.removeItem("Alok");
-console.log(textStorage.getItems());
+const names: Readonly<string[]> = ["Nikhil", "Pragya"];
+names.map((name, nameIndex) =>
+  console.log(name, nameIndex + 1, "-------- name ------")
+);
